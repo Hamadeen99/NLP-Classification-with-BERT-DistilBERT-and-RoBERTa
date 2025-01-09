@@ -1,7 +1,7 @@
 # NLP Classification with BERT, DistilBERT, and RoBERTa
 
 ## Overview
-This project explores the use of pretrained transformer models for NLP classification tasks, specifically on the emotion dataset (4 classes) and DBpedia dataset (14 classes). The models used include:
+This project explores the use of pre-trained transformer models for NLP classification tasks, specifically on the emotion dataset (4 classes) and the DBpedia dataset (14 classes). The models used include:
 - **BERT (Bidirectional Encoder Representations from Transformers)**
 - **DistilBERT (a distilled version of BERT)**
 - **RoBERTa (Robustly Optimized BERT)**
@@ -15,9 +15,10 @@ The primary objective is to fine-tune these models for multiclass classification
    - Anger
    - Fear
    - Surprise
+     
 2. **DBpedia Dataset**: A dataset for large-scale text classification, containing 14 non-overlapping categories such as Company, Educational Institution, Artist, Athlete, etc.
 
-The project compares the performance of these models based on metrics such as F1-score and accuracy.
+The project compares the performance of these models based on  F1-score.
 
 ---
 
@@ -30,7 +31,7 @@ Contains utility functions for:
 - Creating dataloaders for training, validation, and testing.
 
 ### `MyBertModel.py`
-Defines the architecture for fine-tuning the pretrained models:
+Defines the architecture for fine-tuning the pre-trained models:
 - A classification head is added to the transformer output.
 - Supports freezing specific layers of the model for partial fine-tuning.
 
@@ -91,30 +92,39 @@ python BertMulticlassClassification.py
 
 
 #### Emotion Dataset
+
+Note that the Number of Epochs = 15
+
 1. **BERT**:
-   - F1-macro: **0.90**
-   - Accuracy: **91%**
+   - F1-macro with freezing: **0.89**
+   - F1-macro without freezing: **0.82**
+     
 2. **DistilBERT**:
    - F1-macro: **0.84**
-   - Accuracy: **84%**
+   
+     
 3. **RoBERTa**:
-   - F1-macro: **0.88**
-   - Accuracy: **88%**
+   - F1-macro with freezing: **0.89**
+   - F1-macro without freezing: **0.76**
+
 
 #### DBpedia Dataset
 1. **BERT**:
    - F1-macro: **0.93**
-   - Accuracy: **93%**
+  
+     
 2. **DistilBERT**:
    - F1-macro: **0.89**
-   - Accuracy: **89%**
+   
+     
 3. **RoBERTa**:
    - F1-macro: **0.91**
-   - Accuracy: **91%**
+   
 
 ---
+
 ### Insights
-- Fine-tuning the entire model yields better results compared to freezing initial layers.
+- Fine-tuning the entire model yields better results compared to freezing the initial layers.
 - BERT provides the best performance but is computationally heavier.
 - DistilBERT is faster but sacrifices some accuracy.
 - RoBERTa balances performance and computational efficiency.
