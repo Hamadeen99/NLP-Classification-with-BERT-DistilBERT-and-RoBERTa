@@ -63,8 +63,8 @@ pip install torch transformers datasets matplotlib scikit-learn tqdm
 ### Setup
 1. Clone this repository:
    ```bash
-   git clone <repository_url>
-   cd NLPClassification
+   git clone <[https://github.com/Hamadeen99/NLP Classification with BERT,DistilBERT and RoBERTa.git)>
+   cd NLP Classification with BERT,DistilBERT and RoBERTa
    ```
 2. Install dependencies:
    ```bash
