@@ -136,4 +136,8 @@ Note that the Number of Epochs = 15
 2. Implement advanced techniques like knowledge distillation or pruning to optimize model size and performance.
 3. Explore additional transformer architectures for NLP tasks.
 
+##
+
+This project was assigned as part of the NLP and LLM Course, instructed by Professor Ausif mahmood.
+
 
